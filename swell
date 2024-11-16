@@ -1,0 +1,137 @@
+/* Header */
+header {
+    background-color: #F7F7F7; /* Light Gray for the header background */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1s forwards 0.3s; /* Slide-in animation for header */
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 0.6s forwards;
+}
+
+header nav ul li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+header nav ul li:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+header nav ul li:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+header nav ul li a {
+    color: #007aff; /* Soft Blue for links */
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effects for Links */
+header nav ul li a:hover {
+    color: #0051a2; /* Darker Blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transform */
+}
+
+
+/* Profile Picture Hover Effect */
+.profile-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic {
+    width: 120px; /* Adjust size of the profile picture */
+    height: 120px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect on Profile Picture */
+.profile-link:hover .profile-pic {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF; /* White background for clean and bright look */
+    color: #333333; /* Dark Gray for text */
+    line-height: 1.6;
+    transition: all 0.4s ease;
+}
+
+/* Header Navigation Bar */
+header {
+    background-color: #F7F7F7; /* Light Gray for the header background */
+    padding: 10px 0; /* Reduced padding to make the header shorter */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideInHeader 1s forwards 0.3s; /* Slide-in animation for header */
+}
+
+header nav {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+    transition: all 0.4s ease;
+}
+
+/* Header Navigation Bar with Semi-Transparent Black Background */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px 20px; /* Reduced padding to make the header shorter */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for more depth */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideInHeader 1s forwards 0.3s; /* Slide-in animation for header */
+}

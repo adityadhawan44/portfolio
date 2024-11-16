@@ -1,0 +1,830 @@
+/* Basic Reset */
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F7F7F7; /* Light Gray Background */
+    color: #333;
+    line-height: 1.6;
+    
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth; /* Smooth scroll for all anchor links */
+}
+/* Make sure images are visible */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Include font-display property for web fonts */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeue.woff2') format('woff2');
+    font-display: swap; /* Fallback to system font while loading */
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #007aff, #00c6ff); /* Soft Blue Gradient */
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s ease-in-out;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #0051a2, #006bce); /* Darker Gradient on Hover */
+}
+
+/* Centered Nav Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Center the links */
+    flex: 1;
+}
+
+/* Navigation Links */
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 15px;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD700; /* Gold Highlight on Hover */
+}
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li a {
+    color: #FFFFFF; /* White text for better contrast */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007aff; /* Soft Blue color on hover */
+    transform: translateY(-2px);
+}
+
+/* Right Side: Search Bar and Language Selector */
+.right-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.search-bar:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.5);
+}
+
+/* Language Selector */
+.language-selector {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.language-selector:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.5);
+}
+
+/* Slide-in Animation for Header */
+/* @keyframes slideInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* Hover effect for links with underline animation */
+.nav-links li a:hover {
+    color: #007aff; /* Soft Blue color on hover */
+    border-bottom: 2px solid #007aff; /* Soft Blue underline */
+    padding-bottom: 5px;
+}
+
+
+/* Flexbox Layout for Nav */
+header nav {
+    display: flex;
+    justify-content: space-between; /* Space between left and right */
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 25px;
+    position: relative;
+}
+
+/* Navigation Link Style */
+header nav ul li a {
+    color: #333333; /* Dark Gray for default text */
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect - Change Text Color */
+header nav ul li a:hover {
+    color: #007aff; /* Soft Blue color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Add a Bottom Border Animation */
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #007aff;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Expand the underline to 100% on hover */
+}
+
+
+
+
+
+/* Profile Section */
+#profile {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Profile Picture Hover Effect */
+.profile-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.profile-link:hover .profile-pic {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+/* Call-to-Action Button Styling */
+.cta-button {
+    display: inline-block;
+    background-color: #007aff;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 122, 255, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    background-color: #0051a2;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 122, 255, 0.5);
+}
+
+/* Button Click Animation */
+.cta-button:active {
+    transform: scale(0.95); /* Slightly scale down the button */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a deeper shadow */
+    transition: transform 0.1s ease-in-out; /* Smooth transition for the click effect */
+}
+
+
+/* Enhance focus states */
+.search-bar:focus, .language-selector:focus, form input:focus, form textarea:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.5);
+    outline: none; /* Remove default outline for custom focus style */
+}
+
+/* For buttons */
+.cta-button:focus {
+    outline: 3px solid #007aff;
+}
+
+
+/* Social Media Section */
+#social-media {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark text color */
+}
+
+#social-media h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000000; /* Black for heading */
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between each social media link */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #333333; /* Dark color for text */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.social-icon i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.social-icon.instagram:hover {
+    background-color: #e4405f; /* Instagram's color */
+    border-color: #e4405f;
+}
+
+.social-icon.linkedin:hover {
+    background-color: #0077b5; /* LinkedIn's color */
+    border-color: #0077b5;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1da1f2; /* Twitter's color */
+    border-color: #1da1f2;
+}
+
+
+/* Intro Section */
+#home {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #FFFFFF; /* White text for high contrast */
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+/* Intro Container Styling */
+.intro {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center;
+    gap: 50px; /* Increased space between the image and heading */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    text-align: left;
+}
+
+/* Profile Photo Container */
+.profile-photo {
+    width: 200px; /* Set the width of the profile picture */
+    height: 200px; /* Make the height equal to the width for a perfect circle */
+    border-radius: 50%; /* Makes the container round */
+    overflow: hidden; /* Ensures the image doesn't spill out of the circle */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin-bottom: 20px; /* Space below the profile picture */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image */
+.profile-photo img {
+    width: 100%; /* Image takes the full width of the container */
+    height: 100%; /* Image takes the full height of the container */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect for Profile Image */
+.profile-photo img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+/* Heading Styling */
+.intro h1 {
+    font-size: 3.5rem; /* Increased font size for better visibility */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* White text */
+    animation: fadeInUp 1s forwards; /* Fade-in effect */
+    max-width: 600px; /* Max width for text for better readability */
+}
+
+
+
+
+/* Simple and Clean Effect for <h1> */
+#home .intro h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #000000; /* Black text */
+    animation: fadeInUp 1.2s ease-out;
+    position: relative;
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+/* Fade-in and Slide-up effect */
+/* @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* Optional Hover Effect */
+#home .intro h1:hover {
+    color: #007aff; /* Soft blue color on hover */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 122, 255, 0.5); /* Soft glow on hover */
+}
+
+
+#home .intro p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #FFFFFF; /* White text for paragraph */
+    animation: fadeInUp 1.2s forwards;
+}
+
+
+
+/* Fade-in animation */
+/* @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+
+/* Apply Roboto font to paragraph in About Section */
+#about p {
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    line-height: 1.8; /* Increased line height for better spacing */
+    color: #555555; /* Soft gray for the paragraph text */
+    margin-bottom: 20px; /* Space below paragraph */
+    max-width: 800px; /* Max width for paragraph to prevent long lines */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tech Images Section */
+#about .tech-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between each image */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+#about .tech-images img {
+    width: 150px; /* Set a fixed width for images */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+#about .tech-images img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Fade-in Animation */
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    text-align: left;
+    margin: 10px auto;
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+#about ul li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+#about ul li:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+#about ul li:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    /* Adjustments for small screens */
+    .intro {
+        flex-direction: column; /* Stack profile image and text vertically */
+        gap: 30px; /* Reduce gap between items */
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .search-bar, .language-selector {
+        width: 100%; /* Full width on smaller devices */
+    }
+}
+
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#portfolio h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.portfolio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.portfolio-list li {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+}
+
+.project-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2rem;
+}
+
+.portfolio-list a:hover {
+    color: #0056b3;
+}
+
+/* Section Divider (gradient line between sections) */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    margin: 40px 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #FFFFFF; /* White for a clean background */
+    color: #333333; /* Dark Gray for text */
+    text-align: center;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+/* Heading in About Section */
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000; /* Black for headings */
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-list li {
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-image {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* Contact Me Section */
+#contact-me {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7; /* Light Gray background */
+    color: #333333; /* Dark Gray text */
+    animation: fadeIn 1s ease forwards; /* Fade-in effect */
+}
+
+#contact-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000000; /* Black for heading */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Contact Details Styling */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between items */
+    flex-wrap: wrap; /* Allow wrap for smaller screens */
+}
+
+.contact-item {
+    background-color: #ffffff; /* White background for each contact item */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Icons for Contact Items */
+.contact-item i {
+    font-size: 2rem;
+    color: #007aff; /* Blue for icons */
+    margin-right: 15px;
+}
+
+/* Hover Effects */
+.contact-item:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    color: #333333; /* Dark gray for text */
+}
+
+.contact-item a {
+    color: #007aff; /* Blue color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.contact-item a:hover {
+    color: #0051a2; /* Darker blue on hover */
+}
+
+/* Fade-in Animation */
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* Remove the duplicate @keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    background-color: #FFFFFF;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input:hover, form textarea:hover {
+    border-color: #007aff;
+    transform: translateY(-2px);
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.5);
+    transform: translateY(-2px); /* Maintain the hover effect on focus */
+}
+form input:focus-visible, form textarea:focus-visible {
+    outline: 2px solid #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.5);
+}
+
+
+/* Clean Footer */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #333;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+}
+
+
+/* Subtle Gradient Background Animation */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #007aff, #00c6ff);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff7a00, #ff00c6);
+    }
+    100% {
+        background: linear-gradient(135deg, #007aff, #00c6ff);
+    }
+}
+
+/* body {
+    animation: gradientAnimation 15s ease infinite;
+    background-size: 400% 400%;
+} */
+
+
+
